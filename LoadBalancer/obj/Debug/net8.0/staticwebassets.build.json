@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "nFbbJWKJmvVbn+GelTGBsHGsjucTQ5U7I4m+U93iPIM=",
+  "Source": "LoadBalancer",
+  "BasePath": "_content/LoadBalancer",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
