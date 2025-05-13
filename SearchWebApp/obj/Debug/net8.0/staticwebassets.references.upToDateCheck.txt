@@ -24,3 +24,5 @@ C:\Users\Axelb\Source\Repos\Arkitekturprinciper--\SearchMonitor\obj\Debug\net8.0
 C:\Users\Axelb\Source\Repos\Arkitekturprinciper--\SearchMonitor\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Axelb\Source\Repos\Arkitekturprinciper--\SearchMonitor\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Axelb\Source\Repos\Arkitekturprinciper--\SearchMonitor\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Axelb\Source\Repos\Arkitekturprinciper1.pull\SearchMonitor\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Axelb\Source\Repos\Arkitekturprinciper1.pull\SearchMonitor\obj\Debug\net8.0\staticwebassets.build.json

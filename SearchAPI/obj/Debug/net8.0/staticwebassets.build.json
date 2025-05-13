@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "Hash": "PTpPu3q8mmfHLXKbknjt3Yq64pMZ+OM8L2cuZ0cILpA=",
+  "Hash": "oFoFk92kV/xw/vCAEyMZ0Vie/bwWPPzbV8j9tcJzizY=",
   "Source": "SearchAPI",
   "BasePath": "_content/SearchAPI",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [
     {
-      "Identity": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper--\\SearchMonitor\\SearchMonitor.csproj",
+      "Identity": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchMonitor\\SearchMonitor.csproj",
       "Version": 2,
       "Source": "SearchMonitor",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
@@ -22,17 +22,17 @@
     {
       "Name": "SearchMonitor\\wwwroot",
       "Source": "SearchMonitor",
-      "ContentRoot": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper--\\SearchMonitor\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchMonitor\\wwwroot\\",
       "BasePath": "_content/SearchMonitor",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper--\\SearchAPI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\SearchAPI.styles.css",
+      "Identity": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchAPI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\SearchAPI.styles.css",
       "SourceId": "SearchAPI",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper--\\SearchAPI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchAPI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/SearchAPI",
       "RelativePath": "SearchAPI#[.{fingerprint}]?.styles.css",
       "AssetKind": "All",
@@ -47,13 +47,13 @@
       "Integrity": "XrakCRlQanATtdvhODi4mNI8KDIdn510GQjBDWX/+yQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper--\\SearchAPI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\SearchAPI.styles.css"
+      "OriginalItemSpec": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchAPI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\SearchAPI.styles.css"
     },
     {
-      "Identity": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper--\\SearchMonitor\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\SearchMonitor.bundle.scp.css",
+      "Identity": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchMonitor\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\SearchMonitor.bundle.scp.css",
       "SourceId": "SearchMonitor",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper--\\SearchMonitor\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchMonitor\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/SearchMonitor",
       "RelativePath": "SearchMonitor#[.{fingerprint}]!.bundle.scp.css",
       "AssetKind": "All",
@@ -68,13 +68,13 @@
       "Integrity": "2Qq5Qq4fJ2tDTi6qnMy+VAXLo+JhE5zKIbJagU8dBmA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper--\\SearchMonitor\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\SearchMonitor.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchMonitor\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\SearchMonitor.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper--\\SearchMonitor\\wwwroot\\app.css",
+      "Identity": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchMonitor\\wwwroot\\app.css",
       "SourceId": "SearchMonitor",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper--\\SearchMonitor\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchMonitor\\wwwroot\\",
       "BasePath": "_content/SearchMonitor",
       "RelativePath": "app#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -89,13 +89,13 @@
       "Integrity": "u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper--\\SearchMonitor\\wwwroot\\app.css"
+      "OriginalItemSpec": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchMonitor\\wwwroot\\app.css"
     },
     {
-      "Identity": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper--\\SearchMonitor\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchMonitor\\wwwroot\\bootstrap\\bootstrap.min.css",
       "SourceId": "SearchMonitor",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper--\\SearchMonitor\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchMonitor\\wwwroot\\",
       "BasePath": "_content/SearchMonitor",
       "RelativePath": "bootstrap/bootstrap.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -110,13 +110,13 @@
       "Integrity": "SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper--\\SearchMonitor\\wwwroot\\bootstrap\\bootstrap.min.css"
+      "OriginalItemSpec": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchMonitor\\wwwroot\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper--\\SearchMonitor\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchMonitor\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "SearchMonitor",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper--\\SearchMonitor\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchMonitor\\wwwroot\\",
       "BasePath": "_content/SearchMonitor",
       "RelativePath": "bootstrap/bootstrap.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -131,13 +131,13 @@
       "Integrity": "gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper--\\SearchMonitor\\wwwroot\\bootstrap\\bootstrap.min.css.map"
+      "OriginalItemSpec": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchMonitor\\wwwroot\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper--\\SearchMonitor\\wwwroot\\favicon.png",
+      "Identity": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchMonitor\\wwwroot\\favicon.png",
       "SourceId": "SearchMonitor",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper--\\SearchMonitor\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchMonitor\\wwwroot\\",
       "BasePath": "_content/SearchMonitor",
       "RelativePath": "favicon#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -152,13 +152,13 @@
       "Integrity": "4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper--\\SearchMonitor\\wwwroot\\favicon.png"
+      "OriginalItemSpec": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchMonitor\\wwwroot\\favicon.png"
     }
   ],
   "Endpoints": [
     {
       "Route": "_content/SearchMonitor/app.css",
-      "AssetFile": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper--\\SearchMonitor\\wwwroot\\app.css",
+      "AssetFile": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchMonitor\\wwwroot\\app.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -183,7 +183,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 07 May 2025 12:09:53 GMT"
+          "Value": "Tue, 13 May 2025 09:26:54 GMT"
         }
       ],
       "EndpointProperties": [
@@ -195,7 +195,7 @@
     },
     {
       "Route": "_content/SearchMonitor/app.da95v2qkru.css",
-      "AssetFile": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper--\\SearchMonitor\\wwwroot\\app.css",
+      "AssetFile": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchMonitor\\wwwroot\\app.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -220,7 +220,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 07 May 2025 12:09:53 GMT"
+          "Value": "Tue, 13 May 2025 09:26:54 GMT"
         }
       ],
       "EndpointProperties": [
@@ -240,7 +240,7 @@
     },
     {
       "Route": "_content/SearchMonitor/bootstrap/bootstrap.min.6gzpyzhau4.css",
-      "AssetFile": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper--\\SearchMonitor\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "AssetFile": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchMonitor\\wwwroot\\bootstrap\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -265,7 +265,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 07 May 2025 12:09:53 GMT"
+          "Value": "Tue, 13 May 2025 09:26:54 GMT"
         }
       ],
       "EndpointProperties": [
@@ -285,7 +285,7 @@
     },
     {
       "Route": "_content/SearchMonitor/bootstrap/bootstrap.min.css",
-      "AssetFile": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper--\\SearchMonitor\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "AssetFile": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchMonitor\\wwwroot\\bootstrap\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -310,7 +310,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 07 May 2025 12:09:53 GMT"
+          "Value": "Tue, 13 May 2025 09:26:54 GMT"
         }
       ],
       "EndpointProperties": [
@@ -322,7 +322,7 @@
     },
     {
       "Route": "_content/SearchMonitor/bootstrap/bootstrap.min.css.8inm30yfxf.map",
-      "AssetFile": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper--\\SearchMonitor\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "AssetFile": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchMonitor\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -347,7 +347,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 07 May 2025 12:09:53 GMT"
+          "Value": "Tue, 13 May 2025 09:26:54 GMT"
         }
       ],
       "EndpointProperties": [
@@ -367,7 +367,7 @@
     },
     {
       "Route": "_content/SearchMonitor/bootstrap/bootstrap.min.css.map",
-      "AssetFile": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper--\\SearchMonitor\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "AssetFile": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchMonitor\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -392,7 +392,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 07 May 2025 12:09:53 GMT"
+          "Value": "Tue, 13 May 2025 09:26:54 GMT"
         }
       ],
       "EndpointProperties": [
@@ -404,7 +404,7 @@
     },
     {
       "Route": "_content/SearchMonitor/favicon.ifv42okdf2.png",
-      "AssetFile": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper--\\SearchMonitor\\wwwroot\\favicon.png",
+      "AssetFile": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchMonitor\\wwwroot\\favicon.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -429,7 +429,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 07 May 2025 12:09:53 GMT"
+          "Value": "Tue, 13 May 2025 09:26:54 GMT"
         }
       ],
       "EndpointProperties": [
@@ -449,7 +449,7 @@
     },
     {
       "Route": "_content/SearchMonitor/favicon.png",
-      "AssetFile": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper--\\SearchMonitor\\wwwroot\\favicon.png",
+      "AssetFile": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchMonitor\\wwwroot\\favicon.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -474,7 +474,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 07 May 2025 12:09:53 GMT"
+          "Value": "Tue, 13 May 2025 09:26:54 GMT"
         }
       ],
       "EndpointProperties": [
@@ -486,7 +486,7 @@
     },
     {
       "Route": "_content/SearchMonitor/SearchMonitor.bundle.scp.css",
-      "AssetFile": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper--\\SearchMonitor\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\SearchMonitor.bundle.scp.css",
+      "AssetFile": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchMonitor\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\SearchMonitor.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -511,7 +511,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 08:04:58 GMT"
+          "Value": "Tue, 13 May 2025 09:37:05 GMT"
         }
       ],
       "EndpointProperties": [
@@ -523,7 +523,7 @@
     },
     {
       "Route": "_content/SearchMonitor/SearchMonitor.tzp9bpv1px.bundle.scp.css",
-      "AssetFile": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper--\\SearchMonitor\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\SearchMonitor.bundle.scp.css",
+      "AssetFile": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchMonitor\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\SearchMonitor.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -548,7 +548,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 08:04:58 GMT"
+          "Value": "Tue, 13 May 2025 09:37:05 GMT"
         }
       ],
       "EndpointProperties": [
@@ -568,7 +568,7 @@
     },
     {
       "Route": "SearchAPI.ecq05vvt2y.styles.css",
-      "AssetFile": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper--\\SearchAPI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\SearchAPI.styles.css",
+      "AssetFile": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchAPI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\SearchAPI.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -593,7 +593,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 08:05:00 GMT"
+          "Value": "Tue, 13 May 2025 09:37:06 GMT"
         },
         {
           "Name": "Link",
@@ -617,7 +617,7 @@
     },
     {
       "Route": "SearchAPI.styles.css",
-      "AssetFile": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper--\\SearchAPI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\SearchAPI.styles.css",
+      "AssetFile": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchAPI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\SearchAPI.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -642,7 +642,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 08:05:00 GMT"
+          "Value": "Tue, 13 May 2025 09:37:06 GMT"
         },
         {
           "Name": "Link",

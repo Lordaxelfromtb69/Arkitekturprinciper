@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\skriv\\Source\\Repos\\Arkitekturprinciper\\SearchWebApp\\SearchWebApp.csproj": {}
+    "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchWebApp\\SearchWebApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\skriv\\Source\\Repos\\Arkitekturprinciper\\SearchMonitor\\SearchMonitor.csproj": {
+    "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchMonitor\\SearchMonitor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\skriv\\Source\\Repos\\Arkitekturprinciper\\SearchMonitor\\SearchMonitor.csproj",
+        "projectUniqueName": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchMonitor\\SearchMonitor.csproj",
         "projectName": "SearchMonitor",
-        "projectPath": "C:\\Users\\skriv\\Source\\Repos\\Arkitekturprinciper\\SearchMonitor\\SearchMonitor.csproj",
-        "packagesPath": "C:\\Users\\skriv\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\skriv\\Source\\Repos\\Arkitekturprinciper\\SearchMonitor\\obj\\",
+        "projectPath": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchMonitor\\SearchMonitor.csproj",
+        "packagesPath": "C:\\Users\\Axelb\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchMonitor\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\skriv\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Axelb\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -69,24 +68,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\skriv\\Source\\Repos\\Arkitekturprinciper\\SearchWebApp\\SearchWebApp.csproj": {
+    "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchWebApp\\SearchWebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\skriv\\Source\\Repos\\Arkitekturprinciper\\SearchWebApp\\SearchWebApp.csproj",
+        "projectUniqueName": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchWebApp\\SearchWebApp.csproj",
         "projectName": "SearchWebApp",
-        "projectPath": "C:\\Users\\skriv\\Source\\Repos\\Arkitekturprinciper\\SearchWebApp\\SearchWebApp.csproj",
-        "packagesPath": "C:\\Users\\skriv\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\skriv\\Source\\Repos\\Arkitekturprinciper\\SearchWebApp\\obj\\",
+        "projectPath": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchWebApp\\SearchWebApp.csproj",
+        "packagesPath": "C:\\Users\\Axelb\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchWebApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\skriv\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Axelb\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -95,15 +94,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\skriv\\Source\\Repos\\Arkitekturprinciper\\Shared\\Shared.csproj": {
-                "projectPath": "C:\\Users\\skriv\\Source\\Repos\\Arkitekturprinciper\\Shared\\Shared.csproj"
+              "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\Shared\\Shared.csproj": {
+                "projectPath": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\Shared\\Shared.csproj"
               }
             }
           }
@@ -142,24 +140,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\skriv\\Source\\Repos\\Arkitekturprinciper\\Shared\\Shared.csproj": {
+    "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\Shared\\Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\skriv\\Source\\Repos\\Arkitekturprinciper\\Shared\\Shared.csproj",
+        "projectUniqueName": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\Shared\\Shared.csproj",
         "projectName": "Shared",
-        "projectPath": "C:\\Users\\skriv\\Source\\Repos\\Arkitekturprinciper\\Shared\\Shared.csproj",
-        "packagesPath": "C:\\Users\\skriv\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\skriv\\Source\\Repos\\Arkitekturprinciper\\Shared\\obj\\",
+        "projectPath": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\Shared\\Shared.csproj",
+        "packagesPath": "C:\\Users\\Axelb\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\skriv\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Axelb\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -168,15 +166,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\skriv\\Source\\Repos\\Arkitekturprinciper\\SearchMonitor\\SearchMonitor.csproj": {
-                "projectPath": "C:\\Users\\skriv\\Source\\Repos\\Arkitekturprinciper\\SearchMonitor\\SearchMonitor.csproj"
+              "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchMonitor\\SearchMonitor.csproj": {
+                "projectPath": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchMonitor\\SearchMonitor.csproj"
               }
             }
           }
@@ -212,7 +209,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
