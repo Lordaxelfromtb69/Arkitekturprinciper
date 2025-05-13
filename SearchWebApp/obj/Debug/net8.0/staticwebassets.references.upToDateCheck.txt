@@ -10,3 +10,17 @@ C:\Users\Axelb\Source\Repos\SearchEngine\SearchMonitor\obj\Debug\net8.0\staticwe
 C:\Users\Axelb\Source\Repos\SearchEngine\SearchMonitor\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Axelb\Source\Repos\SearchEngine\SearchMonitor\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Axelb\Source\Repos\SearchEngine\SearchMonitor\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Axelb\Source\Repos\Arkitekturprinciper--\SearchMonitor\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Axelb\Source\Repos\Arkitekturprinciper--\SearchMonitor\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Axelb\Source\Repos\Arkitekturprinciper--\SearchMonitor\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Axelb\Source\Repos\Arkitekturprinciper--\SearchMonitor\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Axelb\Source\Repos\Arkitekturprinciper--\SearchMonitor\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Axelb\Source\Repos\Arkitekturprinciper--\SearchMonitor\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Axelb\Source\Repos\Arkitekturprinciper--\SearchMonitor\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Axelb\Source\Repos\Arkitekturprinciper--\SearchMonitor\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Axelb\Source\Repos\Arkitekturprinciper--\SearchMonitor\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Axelb\Source\Repos\Arkitekturprinciper--\SearchMonitor\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Axelb\Source\Repos\Arkitekturprinciper--\SearchMonitor\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Axelb\Source\Repos\Arkitekturprinciper--\SearchMonitor\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Axelb\Source\Repos\Arkitekturprinciper--\SearchMonitor\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Axelb\Source\Repos\Arkitekturprinciper--\SearchMonitor\obj\Debug\net8.0\staticwebassets.build.json

@@ -1,0 +1,139 @@
+################################################################################
+# Visual Studio
+################################################################################
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# MonoDevelop
+*.userprefs
+
+# Workspace
+.vs/
+
+# Auto-generated VS Code workspace history
+.history/
+
+################################################################################
+# Build results
+################################################################################
+
+# Build directories
+[Bb]in/
+[Oo]bj/
+out/
+
+# Visual Studio cache/options directory
+.vs/
+
+# Rider
+.idea/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+################################################################################
+# NuGet
+################################################################################
+
+# NuGet Packages
+*.nupkg
+# The packages folder can be ignored because of Package Restore
+**/[Pp]ackages/*
+# except build/, which is used as an MSBuild reference
+!**/[Pp]ackages/build/
+# NuGet v3's project.json files
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+################################################################################
+# Microsoft “package” folders
+################################################################################
+
+# DotNet CLI
+.nuget/
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+################################################################################
+# Microsoft Visual Studio Code
+################################################################################
+
+.vscode/
+
+################################################################################
+# Rider
+################################################################################
+
+.idea/
+*.sln.iml
+
+################################################################################
+# Test Results
+################################################################################
+
+[TestRr]esult*/        # TestResult, testResults, TestResults
+*.trx
+*.coverage
+*.coveragexml
+*.testsettings
+*.vsmdi
+
+################################################################################
+# Others
+################################################################################
+
+# JetBrains Rider local history
+.localhistory/
+
+# NCrunch
+*_ncrunch_*
+.*crunch*.local.xml
+
+# DotCover
+*.dotCover
+*.dcvr
+
+# Coverlet
+coverage*.json
+coverage*.xml
+coverage*.info
+
+# StyleCop
+StyleCopReport.xml
+
+# File-based database
+*.mdf
+*.ldf
+
+# IIS Express
+IISExpress/ 
+*.vsix
+
+# Logs
+*.log
+
+# Swagger / NSwag
+swagger.json
+swagger.yaml
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+################################################################################
+# End of `.gitignore`
+################################################################################

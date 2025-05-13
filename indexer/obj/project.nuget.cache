@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Zccu3To8HN8=",
+  "dgSpecHash": "655ZRo8GMos=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Axelb\\Source\\Repos\\SearchEngine\\indexer\\indexer.csproj",
+  "projectFilePath": "C:\\Users\\Axelb\\OneDrive\\Skrivebord\\Arkitekturprinciper--\\indexer\\indexer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Axelb\\.nuget\\packages\\microsoft.data.sqlite\\8.0.1\\microsoft.data.sqlite.8.0.1.nupkg.sha512",
     "C:\\Users\\Axelb\\.nuget\\packages\\microsoft.data.sqlite.core\\8.0.1\\microsoft.data.sqlite.core.8.0.1.nupkg.sha512",

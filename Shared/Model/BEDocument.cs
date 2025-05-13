@@ -12,6 +12,14 @@ namespace Shared.Model
 
         public String mCreationTime;
 
+        public int Id { get; set; }
+
+        public object Title { get; set; }
+
+        public string Name { get; set; }
+
+        public string Path { get; set; }
+
         public IEnumerable<object> GetWords()
         {
             throw new NotImplementedException();

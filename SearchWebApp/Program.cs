@@ -1,17 +1,14 @@
-// Program.cs (opdateret til at inkludere HttpClient)
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using SearchWebApp.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Tilføj HttpClient til at kalde SearchAPI
-builder.Services.AddScoped<SearchService>(sp =>
+// HttpClient til API-opkald
+builder.Services.AddHttpClient<SearchService>(client =>
 {
-    var httpClient = sp.GetRequiredService<HttpClient>();
-    return new SearchService(httpClient); // Sørg for at returnere en værdi uanset hvad
+    client.BaseAddress = new Uri("http://localhost:5000"); // Din SearchAPI-base
 });
-
 
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();

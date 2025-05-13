@@ -8,9 +8,6 @@
     <None Remove="Model\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Model\" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\SearchMonitor\SearchMonitor.csproj" />
   </ItemGroup>
 </Project>

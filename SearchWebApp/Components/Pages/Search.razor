@@ -1,0 +1,35 @@
+﻿@page "/search"
+@inject SearchService SearchService
+@using Shared.Model
+@using SearchWebApp.Services;
+
+<h3>Søgemaskine</h3>
+
+<input @bind="query" placeholder="Søg efter noget..." />
+<button class="btn btn-primary" @onclick="PerformSearch">Søg</button>
+
+@if (result != null)
+{
+    <p><strong>Antal resultater:</strong> @result.Hits</p>
+    <p><strong>Tid brugt:</strong> @result.TimeUsed.TotalSeconds sekunder</p>
+
+    <ul>
+        @foreach (var hit in result.DocumentHits)
+        {
+            <li>
+                <strong>@hit.Document.Name</strong><br />
+                <em>@hit.Snippet</em>
+            </li>
+        }
+    </ul>
+}
+
+@code {
+    private string query = "";
+    private SearchResult? result;
+
+    private async Task PerformSearch()
+    {
+        result = await SearchService.SearchAsync(query);
+    }
+}

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SearchAPI;
-using System.Collections.Generic;
+using Shared.Model;
 using System.Threading.Tasks;
 
 [ApiController]
@@ -14,9 +14,6 @@ public class SearchController : ControllerBase
         _searchLogic = new SearchLogic();
     }
 
-    /// <summary>
-    /// Modtager en søgeforespørgsel og returnerer søgeresultater fra databasen.
-    /// </summary>
     [HttpGet]
     public async Task<IActionResult> Search([FromQuery] string query)
     {
@@ -25,8 +22,8 @@ public class SearchController : ControllerBase
             return BadRequest("Query parameter is required.");
         }
 
-        var searchTerms = query.Split(' '); // Splitter input på mellemrum
-        var result = _searchLogic.Search(searchTerms); // Kalder søgelogikken
+        var searchTerms = query.Split(' ');
+        var result = _searchLogic.Search(searchTerms);
 
         return Ok(result);
     }
