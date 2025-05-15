@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BHCm610xkZA=",
+  "dgSpecHash": "hEiegu3VUJE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchAPI\\SearchAPI.csproj",
+  "projectFilePath": "C:\\Users\\Axelb\\source\\repos\\Arkitekturprinciper1.pull\\SearchAPI\\SearchAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Axelb\\.nuget\\packages\\microsoft.data.sqlite\\9.0.2\\microsoft.data.sqlite.9.0.2.nupkg.sha512",
     "C:\\Users\\Axelb\\.nuget\\packages\\microsoft.data.sqlite.core\\9.0.2\\microsoft.data.sqlite.core.9.0.2.nupkg.sha512",

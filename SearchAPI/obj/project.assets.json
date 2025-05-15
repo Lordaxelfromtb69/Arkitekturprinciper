@@ -811,9 +811,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchAPI\\SearchAPI.csproj",
+      "projectUniqueName": "C:\\Users\\Axelb\\source\\repos\\Arkitekturprinciper1.pull\\SearchAPI\\SearchAPI.csproj",
       "projectName": "SearchAPI",
-      "projectPath": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchAPI\\SearchAPI.csproj",
+      "projectPath": "C:\\Users\\Axelb\\source\\repos\\Arkitekturprinciper1.pull\\SearchAPI\\SearchAPI.csproj",
       "packagesPath": "C:\\Users\\Axelb\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchAPI\\obj\\",
       "projectStyle": "PackageReference",
@@ -836,8 +836,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\Shared\\Shared.csproj": {
-              "projectPath": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\Shared\\Shared.csproj"
+            "C:\\Users\\Axelb\\source\\repos\\Arkitekturprinciper1.pull\\Shared\\Shared.csproj": {
+              "projectPath": "C:\\Users\\Axelb\\source\\repos\\Arkitekturprinciper1.pull\\Shared\\Shared.csproj"
             }
           }
         }
