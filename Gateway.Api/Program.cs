@@ -3,61 +3,78 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
-using Gateway.Api.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-var builder = WebApplication.CreateBuilder(args);
+// DTO-record for individual snippets
+record SnippetResult(string Document, string SnippetSentence);
 
-// 1) Registrér HttpClient’er for hver back-end (ret portene til dine faktisk kørende services):
-builder.Services.AddHttpClient("sent", client =>
-    client.BaseAddress = new Uri("http://localhost:5099/")   // Snippets.Api HTTP
-);
-builder.Services.AddHttpClient("deleted", client =>
-    client.BaseAddress = new Uri("http://localhost:5021/")   // Deleted.Api HTTP
-);
+// DTO-record for aggregated snippets with source info
+record AggregatedSnippet(string Source, string Document, string SnippetSentence);
 
-// 2) Swagger/OpenAPI til udvikling
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
-var app = builder.Build();
-
-// 3) Swagger UI kun i Development
-if (app.Environment.IsDevelopment())
+namespace Gateway.Api
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
-
-// 4) Health-check (valgfrit, men anbefales)
-app.MapGet("/health", () => Results.Ok("Healthy"));
-
-// 5) Aggregator-endpoint: /all-snippets/search/{term}
-app.MapGet("/all-snippets/search/{term}", async (string term, IHttpClientFactory http, ILogger<Program> log) =>
-{
-    var results = new List<SnippetResult>();
-    foreach (var name in new[] { "sent", "deleted" })
+    public class Program
     {
-        var client = http.CreateClient(name);
-        try
+        public static void Main(string[] args)
         {
-            // Husk absolut sti (leder efter /snippets/search/{term})
-            var partial = await client.GetFromJsonAsync<List<SnippetResult>>(
-                $"/snippets/search/{Uri.EscapeDataString(term)}",
-                default
+            var builder = WebApplication.CreateBuilder(args);
+
+            // 1) Register HttpClient instances for each back-end service
+            builder.Services.AddHttpClient("sent", client =>
+                client.BaseAddress = new Uri("http://localhost:5099/") // Snippets.Api HTTP
             );
-            if (partial != null)
-                results.AddRange(partial);
-        }
-        catch (Exception ex) when (ex is HttpRequestException || ex is TaskCanceledException)
-        {
-            log.LogWarning(ex, "Call to {Service} failed", name);
+            builder.Services.AddHttpClient("deleted", client =>
+                client.BaseAddress = new Uri("http://localhost:5021/") // Deleted.Api HTTP
+            );
+
+            // 2) Add Swagger/OpenAPI for testing
+            builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddSwaggerGen();
+
+            var app = builder.Build();
+
+            // 3) Swagger UI only in Development
+            if (app.Environment.IsDevelopment())
+            {
+                app.UseSwagger();
+                app.UseSwaggerUI();
+            }
+
+            // 4) Health-check endpoint
+            app.MapGet("/health", () => Results.Ok("Healthy"));
+
+            // 5) Aggregator endpoint: combine sent and deleted snippets
+            app.MapGet("/all-snippets/search/{term}", async (string term, IHttpClientFactory http, ILogger<Program> log) =>
+            {
+                var aggregated = new List<AggregatedSnippet>();
+
+                foreach (var source in new[] { "sent", "deleted" })
+                {
+                    var client = http.CreateClient(source);
+                    try
+                    {
+                        var partial = await client.GetFromJsonAsync<List<SnippetResult>>("/snippets/search/" + Uri.EscapeDataString(term));
+                        if (partial != null)
+                        {
+                            foreach (var sn in partial)
+                            {
+                                aggregated.Add(new AggregatedSnippet(source, sn.Document, sn.SnippetSentence));
+                            }
+                        }
+                    }
+                    catch (Exception ex) when (ex is HttpRequestException || ex is TaskCanceledException)
+                    {
+                        log.LogWarning(ex, "Call to {Source} failed", source);
+                    }
+                }
+
+                return Results.Ok(aggregated);
+            });
+
+            app.Run();
         }
     }
-    return Results.Ok(results);
-});
-
-app.Run();
+}

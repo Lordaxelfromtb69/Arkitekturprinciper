@@ -65,3 +65,5 @@ C:\Users\Axelb\source\repos\Arkitekturprinciper1.pull\SearchMonitor\obj\Debug\ne
 C:\Users\Axelb\source\repos\Arkitekturprinciper1.pull\SearchMonitor\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Axelb\source\repos\Arkitekturprinciper1.pull\SearchMonitor\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Axelb\source\repos\Arkitekturprinciper1.pull\SearchMonitor\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Axelb\Source\Repos\Arkitekturprinciper2pull\SearchMonitor\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Axelb\Source\Repos\Arkitekturprinciper2pull\SearchMonitor\obj\Debug\net8.0\staticwebassets.build.json

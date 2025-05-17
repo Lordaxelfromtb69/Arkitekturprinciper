@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchMonitor\\SearchMonitor.csproj",
+      "projectUniqueName": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper2pull\\SearchMonitor\\SearchMonitor.csproj",
       "projectName": "SearchMonitor",
-      "projectPath": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchMonitor\\SearchMonitor.csproj",
+      "projectPath": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper2pull\\SearchMonitor\\SearchMonitor.csproj",
       "packagesPath": "C:\\Users\\Axelb\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper1.pull\\SearchMonitor\\obj\\",
+      "outputPath": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper2pull\\SearchMonitor\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
