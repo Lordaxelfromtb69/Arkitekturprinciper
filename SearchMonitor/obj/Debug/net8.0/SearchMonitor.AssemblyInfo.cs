@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SearchMonitor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d8c468a2ada17405db698a5b6eafd9d6601fca9c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+73092f357a5039d94a7d18329d7af640b9979d61")]
 [assembly: System.Reflection.AssemblyProductAttribute("SearchMonitor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SearchMonitor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
