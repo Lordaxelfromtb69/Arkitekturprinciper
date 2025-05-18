@@ -1,80 +1,100 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Net.Http;
+using System.Linq;
 using System.Net.Http.Json;
-using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Gateway.Api.Models;
 
-// DTO-record for individual snippets
-record SnippetResult(string Document, string SnippetSentence);
+var builder = WebApplication.CreateBuilder(args);
 
-// DTO-record for aggregated snippets with source info
-record AggregatedSnippet(string Source, string Document, string SnippetSentence);
+// Configure HttpClient for the two snippet services with correct ports
+builder.Services.AddHttpClient("sent", c =>
+    c.BaseAddress = new Uri("http://localhost:5099/")   // Snippets.Api HTTP endpoint
+);
+builder.Services.AddHttpClient("deleted", c =>
+    c.BaseAddress = new Uri("http://localhost:5021/")   // Deleted.Api HTTP endpoint
+);
 
-namespace Gateway.Api
+// Add Swagger/OpenAPI for testing
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+var app = builder.Build();
+
+// Enable Swagger UI only in Development
+if (app.Environment.IsDevelopment())
 {
-    public class Program
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+// Health-check endpoint
+app.MapGet("/health", () => Results.Ok("Healthy"));
+
+// Aggregator endpoint: GET /all-snippets/search/{term}
+app.MapGet("/all-snippets/search/{term}", async (
+    string term,
+    IHttpClientFactory http,
+    ILogger<Program> log) =>
+{
+    var aggregated = new List<AggregatedSnippet>();
+
+    foreach (var source in new[] { "sent", "deleted" })
     {
-        public static void Main(string[] args)
+        var client = http.CreateClient(source);
+        try
         {
-            var builder = WebApplication.CreateBuilder(args);
-
-            // 1) Register HttpClient instances for each back-end service
-            builder.Services.AddHttpClient("sent", client =>
-                client.BaseAddress = new Uri("http://localhost:5099/") // Snippets.Api HTTP
+            var partial = await client.GetFromJsonAsync<List<SnippetResult>>(
+                $"/snippets/search/{Uri.EscapeDataString(term)}"
             );
-            builder.Services.AddHttpClient("deleted", client =>
-                client.BaseAddress = new Uri("http://localhost:5021/") // Deleted.Api HTTP
-            );
-
-            // 2) Add Swagger/OpenAPI for testing
-            builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
-
-            var app = builder.Build();
-
-            // 3) Swagger UI only in Development
-            if (app.Environment.IsDevelopment())
+            if (partial != null)
             {
-                app.UseSwagger();
-                app.UseSwaggerUI();
-            }
-
-            // 4) Health-check endpoint
-            app.MapGet("/health", () => Results.Ok("Healthy"));
-
-            // 5) Aggregator endpoint: combine sent and deleted snippets
-            app.MapGet("/all-snippets/search/{term}", async (string term, IHttpClientFactory http, ILogger<Program> log) =>
-            {
-                var aggregated = new List<AggregatedSnippet>();
-
-                foreach (var source in new[] { "sent", "deleted" })
+                foreach (var sn in partial)
                 {
-                    var client = http.CreateClient(source);
-                    try
+                    // Split sentence into words
+                    var words = Regex
+                        .Split(sn.SnippetSentence, @"\W+")
+                        .Where(w => !string.IsNullOrWhiteSpace(w))
+                        .ToArray();
+                    // Find index of the searched term
+                    var idx = Array.FindIndex(words, w =>
+                        string.Equals(w, term, StringComparison.OrdinalIgnoreCase)
+                    );
+                    string snippetContext;
+                    if (idx < 0)
                     {
-                        var partial = await client.GetFromJsonAsync<List<SnippetResult>>("/snippets/search/" + Uri.EscapeDataString(term));
-                        if (partial != null)
-                        {
-                            foreach (var sn in partial)
-                            {
-                                aggregated.Add(new AggregatedSnippet(source, sn.Document, sn.SnippetSentence));
-                            }
-                        }
+                        // Fallback to entire sentence if term not found
+                        snippetContext = sn.SnippetSentence;
                     }
-                    catch (Exception ex) when (ex is HttpRequestException || ex is TaskCanceledException)
+                    else
                     {
-                        log.LogWarning(ex, "Call to {Source} failed", source);
+                        // Take 4 words before and after
+                        var start = Math.Max(0, idx - 4);
+                        var end = Math.Min(words.Length, idx + 5);
+                        snippetContext = string.Join(
+                            " ", words.Skip(start).Take(end - start)
+                        );
                     }
+
+                    aggregated.Add(new AggregatedSnippet(
+                        source,
+                        sn.Document,
+                        snippetContext
+                    ));
                 }
-
-                return Results.Ok(aggregated);
-            });
-
-            app.Run();
+            }
+        }
+        catch (Exception ex) when (ex is HttpRequestException || ex is TaskCanceledException)
+        {
+            log.LogWarning(ex, "Call to snippet service '{Service}' failed", source);
         }
     }
-}
+
+    return Results.Ok(aggregated);
+});
+
+app.Run();
