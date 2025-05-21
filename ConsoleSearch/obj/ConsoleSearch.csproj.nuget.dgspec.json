@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper2pull\\ConsoleSearch\\ConsoleSearch.csproj": {}
+    "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciperpull4\\ConsoleSearch\\ConsoleSearch.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper2pull\\ConsoleSearch\\ConsoleSearch.csproj": {
+    "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciperpull4\\ConsoleSearch\\ConsoleSearch.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper2pull\\ConsoleSearch\\ConsoleSearch.csproj",
+        "projectUniqueName": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciperpull4\\ConsoleSearch\\ConsoleSearch.csproj",
         "projectName": "ConsoleSearch",
-        "projectPath": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper2pull\\ConsoleSearch\\ConsoleSearch.csproj",
+        "projectPath": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciperpull4\\ConsoleSearch\\ConsoleSearch.csproj",
         "packagesPath": "C:\\Users\\Axelb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper2pull\\ConsoleSearch\\obj\\",
+        "outputPath": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciperpull4\\ConsoleSearch\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper2pull\\Shared\\Shared.csproj": {
-                "projectPath": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper2pull\\Shared\\Shared.csproj"
+              "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciperpull4\\Shared\\Shared.csproj": {
+                "projectPath": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciperpull4\\Shared\\Shared.csproj"
               }
             }
           }
@@ -79,14 +79,14 @@
         }
       }
     },
-    "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper2pull\\SearchMonitor\\SearchMonitor.csproj": {
+    "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciperpull4\\SearchMonitor\\SearchMonitor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper2pull\\SearchMonitor\\SearchMonitor.csproj",
+        "projectUniqueName": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciperpull4\\SearchMonitor\\SearchMonitor.csproj",
         "projectName": "SearchMonitor",
-        "projectPath": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper2pull\\SearchMonitor\\SearchMonitor.csproj",
+        "projectPath": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciperpull4\\SearchMonitor\\SearchMonitor.csproj",
         "packagesPath": "C:\\Users\\Axelb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper2pull\\SearchMonitor\\obj\\",
+        "outputPath": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciperpull4\\SearchMonitor\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -147,14 +147,14 @@
         }
       }
     },
-    "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper2pull\\Shared\\Shared.csproj": {
+    "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciperpull4\\Shared\\Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper2pull\\Shared\\Shared.csproj",
+        "projectUniqueName": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciperpull4\\Shared\\Shared.csproj",
         "projectName": "Shared",
-        "projectPath": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper2pull\\Shared\\Shared.csproj",
+        "projectPath": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciperpull4\\Shared\\Shared.csproj",
         "packagesPath": "C:\\Users\\Axelb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper2pull\\Shared\\obj\\",
+        "outputPath": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciperpull4\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -175,8 +175,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper2pull\\SearchMonitor\\SearchMonitor.csproj": {
-                "projectPath": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper2pull\\SearchMonitor\\SearchMonitor.csproj"
+              "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciperpull4\\SearchMonitor\\SearchMonitor.csproj": {
+                "projectPath": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciperpull4\\SearchMonitor\\SearchMonitor.csproj"
               }
             }
           }

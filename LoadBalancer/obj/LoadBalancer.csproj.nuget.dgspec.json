@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper2pull\\LoadBalancer\\LoadBalancer.csproj": {}
+    "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciperpull4\\LoadBalancer\\LoadBalancer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper2pull\\LoadBalancer\\LoadBalancer.csproj": {
+    "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciperpull4\\LoadBalancer\\LoadBalancer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper2pull\\LoadBalancer\\LoadBalancer.csproj",
+        "projectUniqueName": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciperpull4\\LoadBalancer\\LoadBalancer.csproj",
         "projectName": "LoadBalancer",
-        "projectPath": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper2pull\\LoadBalancer\\LoadBalancer.csproj",
+        "projectPath": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciperpull4\\LoadBalancer\\LoadBalancer.csproj",
         "packagesPath": "C:\\Users\\Axelb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciper2pull\\LoadBalancer\\obj\\",
+        "outputPath": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciperpull4\\LoadBalancer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
