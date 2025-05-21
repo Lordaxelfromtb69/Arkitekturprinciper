@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Rq/j8+y7g/Vm3Uqyy23HJ78LiW3iz1aqvgrCDbDcMiA=",
+  "Hash": "AXoEEG53iRGCzHYdmqg5V+agCxaQg7SF7eOHthCbi/s=",
   "Source": "SearchAPI",
   "BasePath": "_content/SearchAPI",
   "Mode": "Default",
@@ -511,7 +511,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 18:53:45 GMT"
+          "Value": "Sun, 18 May 2025 19:04:52 GMT"
         }
       ],
       "EndpointProperties": [
@@ -548,7 +548,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 18:53:45 GMT"
+          "Value": "Sun, 18 May 2025 19:04:52 GMT"
         }
       ],
       "EndpointProperties": [
@@ -593,7 +593,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 18:53:47 GMT"
+          "Value": "Sun, 18 May 2025 19:04:54 GMT"
         },
         {
           "Name": "Link",
@@ -642,7 +642,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 18:53:47 GMT"
+          "Value": "Sun, 18 May 2025 19:04:54 GMT"
         },
         {
           "Name": "Link",

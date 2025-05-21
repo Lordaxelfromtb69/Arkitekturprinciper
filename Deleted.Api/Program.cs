@@ -27,11 +27,20 @@ if (app.Environment.IsDevelopment())
 }
 
 // --- Søge‐endpoint mod deleted_items-mappen ---
-app.MapGet("/snippets/search/{term}", (string term, IOptions<PathOptions> opts) =>
+app.MapGet("/snippets/search/{term}", (
+    string term,
+    IOptions<PathOptions> opts,
+    ILogger<Program> logger) =>
 {
     var folder = opts.Value.Folder;
+
     if (!Directory.Exists(folder))
+    {
+        logger.LogWarning("Forespørgsel modtaget, men folder eksisterer ikke: {Folder}", folder);
         return Results.NotFound($"Folder not found: {folder}");
+    }
+
+    logger.LogInformation("Søgeforespørgsel mod Deleted.Api: '{Term}' i folder: {Folder}", term, folder);
 
     var matches = new List<object>();
 
@@ -53,6 +62,8 @@ app.MapGet("/snippets/search/{term}", (string term, IOptions<PathOptions> opts) 
             }
         }
     }
+
+    logger.LogInformation("Deleted.Api søgeord '{Term}' gav {Count} resultat(er)", term, matches.Count);
 
     return Results.Ok(matches);
 });

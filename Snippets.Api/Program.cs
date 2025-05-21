@@ -27,25 +27,30 @@ if (app.Environment.IsDevelopment())
 }
 
 // --- Søge‐endpoint: find snippet i alle filer under den angivne sti ---
-app.MapGet("/snippets/search/{term}", (string term, IOptions<PathOptions> opts) =>
+app.MapGet("/snippets/search/{term}", (
+    string term,
+    IOptions<PathOptions> opts,
+    ILogger<Program> logger) =>
 {
     var folder = opts.Value.Folder;
+
     if (!Directory.Exists(folder))
+    {
+        logger.LogWarning("Forespørgsel modtaget, men folder eksisterer ikke: {Folder}", folder);
         return Results.NotFound($"Folder not found: {folder}");
+    }
+
+    logger.LogInformation("Søgeforespørgsel modtaget: '{Term}' i folder: {Folder}", term, folder);
 
     var matches = new List<object>();
 
-    // Scan alle filer inklusive undermapper
     foreach (var filePath in Directory.EnumerateFiles(folder, "*.*", SearchOption.AllDirectories))
     {
         var text = File.ReadAllText(filePath);
-
-        // Opdel i sætninger: split på ., ! eller ? efterfulgt af whitespace
         var sentences = Regex.Split(text, @"(?<=[\.!\?])\s+");
 
         foreach (var sentence in sentences)
         {
-            // Tjek om sætningen indeholder term som helt ord (case-insensitive)
             if (Regex.IsMatch(sentence, $@"\b{Regex.Escape(term)}\b", RegexOptions.IgnoreCase))
             {
                 matches.Add(new
@@ -53,10 +58,12 @@ app.MapGet("/snippets/search/{term}", (string term, IOptions<PathOptions> opts) 
                     Document = Path.GetRelativePath(folder, filePath),
                     SnippetSentence = sentence.Trim()
                 });
-                break;  // kun første match per dokument
+                break;
             }
         }
     }
+
+    logger.LogInformation("Søgeord '{Term}' gav {Count} resultat(er)", term, matches.Count);
 
     return Results.Ok(matches);
 });

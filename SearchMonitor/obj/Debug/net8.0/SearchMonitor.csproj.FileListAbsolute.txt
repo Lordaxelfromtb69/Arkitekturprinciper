@@ -128,7 +128,6 @@ C:\Users\Axelb\Source\Repos\Arkitekturprinciper2pull\SearchMonitor\obj\Debug\net
 C:\Users\Axelb\Source\Repos\Arkitekturprinciper2pull\SearchMonitor\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.SearchMonitor.props
 C:\Users\Axelb\Source\Repos\Arkitekturprinciper2pull\SearchMonitor\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.SearchMonitor.props
 C:\Users\Axelb\Source\Repos\Arkitekturprinciper2pull\SearchMonitor\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\Axelb\Source\Repos\Arkitekturprinciper2pull\SearchMonitor\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\Axelb\Source\Repos\Arkitekturprinciper2pull\SearchMonitor\obj\Debug\net8.0\SearchMonitor.dll
 C:\Users\Axelb\Source\Repos\Arkitekturprinciper2pull\SearchMonitor\obj\Debug\net8.0\refint\SearchMonitor.dll
 C:\Users\Axelb\Source\Repos\Arkitekturprinciper2pull\SearchMonitor\obj\Debug\net8.0\SearchMonitor.pdb

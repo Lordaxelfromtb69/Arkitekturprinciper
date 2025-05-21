@@ -13,10 +13,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Configure HttpClient for the two snippet services with correct ports
 builder.Services.AddHttpClient("sent", c =>
-    c.BaseAddress = new Uri("http://localhost:5099/")   // Snippets.Api HTTP endpoint
+    c.BaseAddress = new Uri("http://localhost:5099/")
 );
 builder.Services.AddHttpClient("deleted", c =>
-    c.BaseAddress = new Uri("http://localhost:5021/")   // Deleted.Api HTTP endpoint
+    c.BaseAddress = new Uri("http://localhost:5021/")
 );
 
 // Add Swagger/OpenAPI for testing
@@ -25,22 +25,22 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Enable Swagger UI only in Development
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
-// Health-check endpoint
 app.MapGet("/health", () => Results.Ok("Healthy"));
 
-// Aggregator endpoint: GET /all-snippets/search/{term}
+// --- Aggregator endpoint ---
 app.MapGet("/all-snippets/search/{term}", async (
     string term,
     IHttpClientFactory http,
     ILogger<Program> log) =>
 {
+    log.LogInformation("Gateway modtog søgeforespørgsel: '{Term}'", term);
+
     var aggregated = new List<AggregatedSnippet>();
 
     foreach (var source in new[] { "sent", "deleted" })
@@ -48,51 +48,46 @@ app.MapGet("/all-snippets/search/{term}", async (
         var client = http.CreateClient(source);
         try
         {
+            log.LogInformation("Sender forespørgsel til {Source}.Api", source);
+
             var partial = await client.GetFromJsonAsync<List<SnippetResult>>(
                 $"/snippets/search/{Uri.EscapeDataString(term)}"
             );
+
             if (partial != null)
             {
+                log.LogInformation("Modtog {Count} resultater fra {Source}.Api", partial.Count, source);
+
                 foreach (var sn in partial)
                 {
-                    // Split sentence into words
                     var words = Regex
                         .Split(sn.SnippetSentence, @"\W+")
                         .Where(w => !string.IsNullOrWhiteSpace(w))
                         .ToArray();
-                    // Find index of the searched term
+
                     var idx = Array.FindIndex(words, w =>
                         string.Equals(w, term, StringComparison.OrdinalIgnoreCase)
                     );
-                    string snippetContext;
-                    if (idx < 0)
-                    {
-                        // Fallback to entire sentence if term not found
-                        snippetContext = sn.SnippetSentence;
-                    }
-                    else
-                    {
-                        // Take 4 words before and after
-                        var start = Math.Max(0, idx - 4);
-                        var end = Math.Min(words.Length, idx + 5);
-                        snippetContext = string.Join(
-                            " ", words.Skip(start).Take(end - start)
-                        );
-                    }
 
-                    aggregated.Add(new AggregatedSnippet(
-                        source,
-                        sn.Document,
-                        snippetContext
-                    ));
+                    string snippetContext = idx < 0
+                        ? sn.SnippetSentence
+                        : string.Join(" ", words.Skip(Math.Max(0, idx - 4)).Take(9));
+
+                    aggregated.Add(new AggregatedSnippet(source, sn.Document, snippetContext));
                 }
+            }
+            else
+            {
+                log.LogWarning("Ingen data modtaget fra {Source}.Api", source);
             }
         }
         catch (Exception ex) when (ex is HttpRequestException || ex is TaskCanceledException)
         {
-            log.LogWarning(ex, "Call to snippet service '{Service}' failed", source);
+            log.LogWarning(ex, "Kald til {Source}.Api fejlede", source);
         }
     }
+
+    log.LogInformation("Samlet antal resultater: {Total}", aggregated.Count);
 
     return Results.Ok(aggregated);
 });
