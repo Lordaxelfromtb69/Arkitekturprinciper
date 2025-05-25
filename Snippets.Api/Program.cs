@@ -4,29 +4,28 @@ using System.Linq;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using Microsoft.Extensions.Options;
-using Shared.Model;    // PathOptions
+using Shared.Model; // PathOptions
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Bind Paths‐sektionen til PathOptions
+// Bind stier fra appsettings.json
 builder.Services.Configure<PathOptions>(
     builder.Configuration.GetSection("Paths")
 );
 
-// Tilføj Swagger/OpenAPI (valgfrit)
+// Swagger til udvikling
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Kun Swagger i Development
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
-// --- Søge‐endpoint: find snippet i alle filer under den angivne sti ---
+// === Endpoint: søg efter ord i dokumenter 1-500 ===
 app.MapGet("/snippets/search/{term}", (
     string term,
     IOptions<PathOptions> opts,
@@ -36,36 +35,55 @@ app.MapGet("/snippets/search/{term}", (
 
     if (!Directory.Exists(folder))
     {
-        logger.LogWarning("Forespørgsel modtaget, men folder eksisterer ikke: {Folder}", folder);
-        return Results.NotFound($"Folder not found: {folder}");
+        logger.LogWarning("Folder not found: {Folder}", folder);
+        return Results.NotFound("Folder not found.");
     }
 
-    logger.LogInformation("Søgeforespørgsel modtaget: '{Term}' i folder: {Folder}", term, folder);
+    logger.LogInformation("Søger efter '{Term}' i filer 1-500 i folder {Folder}", term, folder);
 
+    // Filtrer filer med navne som tal fra 1-500
+    var files = Directory.EnumerateFiles(folder, "*.*", SearchOption.AllDirectories)
+        .Where(path =>
+        {
+            var fileName = Path.GetFileNameWithoutExtension(path);
+            return int.TryParse(fileName, out int id) && id >= 1 && id <= 500;
+        });
+
+    return Results.Ok(SnippetSearch(term, files, folder));
+});
+
+app.Run();
+
+// === Snippet-logik ===
+static List<object> SnippetSearch(string term, IEnumerable<string> files, string folder)
+{
     var matches = new List<object>();
 
-    foreach (var filePath in Directory.EnumerateFiles(folder, "*.*", SearchOption.AllDirectories))
+    foreach (var file in files)
     {
-        var text = File.ReadAllText(filePath);
-        var sentences = Regex.Split(text, @"(?<=[\.!\?])\s+");
+        var text = File.ReadAllText(file);
+        var words = Regex.Split(text, @"\W+")
+                         .Where(w => !string.IsNullOrWhiteSpace(w))
+                         .ToArray();
 
-        foreach (var sentence in sentences)
+        for (int i = 0; i < words.Length; i++)
         {
-            if (Regex.IsMatch(sentence, $@"\b{Regex.Escape(term)}\b", RegexOptions.IgnoreCase))
+            if (string.Equals(words[i], term, StringComparison.OrdinalIgnoreCase))
             {
+                int start = Math.Max(0, i - 4);
+                int end = Math.Min(words.Length, i + 5);
+                string snippet = string.Join(" ", words.Skip(start).Take(end - start));
+
                 matches.Add(new
                 {
-                    Document = Path.GetRelativePath(folder, filePath),
-                    SnippetSentence = sentence.Trim()
+                    Document = Path.GetRelativePath(folder, file),
+                    SnippetSentence = snippet
                 });
-                break;
+
+                break; // kun ét match per dokument
             }
         }
     }
 
-    logger.LogInformation("Søgeord '{Term}' gav {Count} resultat(er)", term, matches.Count);
-
-    return Results.Ok(matches);
-});
-
-app.Run();
+    return matches;
+}

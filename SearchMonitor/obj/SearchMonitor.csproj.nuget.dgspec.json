@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciperpull4\\SearchMonitor\\SearchMonitor.csproj": {}
+    "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciperpull5\\SearchMonitor\\SearchMonitor.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciperpull4\\SearchMonitor\\SearchMonitor.csproj": {
+    "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciperpull5\\SearchMonitor\\SearchMonitor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciperpull4\\SearchMonitor\\SearchMonitor.csproj",
+        "projectUniqueName": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciperpull5\\SearchMonitor\\SearchMonitor.csproj",
         "projectName": "SearchMonitor",
-        "projectPath": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciperpull4\\SearchMonitor\\SearchMonitor.csproj",
+        "projectPath": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciperpull5\\SearchMonitor\\SearchMonitor.csproj",
         "packagesPath": "C:\\Users\\Axelb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciperpull4\\SearchMonitor\\obj\\",
+        "outputPath": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciperpull5\\SearchMonitor\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
