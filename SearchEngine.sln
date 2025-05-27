@@ -18,6 +18,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gateway.Api", "Gateway.Api\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sent2.Api", "Sent.Api\Sent2.Api.csproj", "{87113E19-A9C3-4F7D-801D-9A6CAA69AB99}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inbox.Api", "Inbox.Api\Inbox.Api.csproj", "{07B8E8D8-EE82-495A-99CF-5D79A66AC28D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loadbalancer", "Loadbalancer\Loadbalancer.csproj", "{166E2C6A-5584-41BC-9BA6-C9DF416DE18B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +48,14 @@ Global
 		{87113E19-A9C3-4F7D-801D-9A6CAA69AB99}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87113E19-A9C3-4F7D-801D-9A6CAA69AB99}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87113E19-A9C3-4F7D-801D-9A6CAA69AB99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07B8E8D8-EE82-495A-99CF-5D79A66AC28D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07B8E8D8-EE82-495A-99CF-5D79A66AC28D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07B8E8D8-EE82-495A-99CF-5D79A66AC28D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07B8E8D8-EE82-495A-99CF-5D79A66AC28D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{166E2C6A-5584-41BC-9BA6-C9DF416DE18B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{166E2C6A-5584-41BC-9BA6-C9DF416DE18B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{166E2C6A-5584-41BC-9BA6-C9DF416DE18B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{166E2C6A-5584-41BC-9BA6-C9DF416DE18B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
