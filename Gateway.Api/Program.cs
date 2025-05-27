@@ -7,7 +7,10 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Caching.Distributed;
 using Gateway.Api.Models;
+using Microsoft.Extensions.Caching.StackExchangeRedis;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,6 +23,13 @@ builder.Services.AddHttpClient("sentapi", c =>
 
 builder.Services.AddHttpClient("deleted", c =>
     c.BaseAddress = new Uri("http://localhost:5021/"));  // Deleted.Api
+
+// Redis caching, for at køre redis skal du have en Redis-server kørende brug denne kommando i terminalen: docker run -d --name redis -p 6379:6379 redis
+
+builder.Services.AddStackExchangeRedisCache(options =>
+{
+    options.Configuration = "localhost:6379";
+});
 
 // Swagger
 builder.Services.AddEndpointsApiExplorer();
@@ -37,15 +47,22 @@ if (app.Environment.IsDevelopment())
 // GET /all-snippets/search/{term}?source=sent1-500|sent501+|deleted
 app.MapGet("/all-snippets/search/{term}", async (
     string term,
-    string? source,  // optional query parameter
+    string? source,
     IHttpClientFactory http,
-    ILogger<Program> log) =>
+    ILogger<Program> log,
+    IDistributedCache cache) =>
 {
-    log.LogInformation("Gateway modtog søgning: '{Term}', source: {Source}", term, source ?? "all");
+    var cacheKey = $"{term}:{source ?? "all"}";
+    var cached = await cache.GetStringAsync(cacheKey);
+    if (cached != null)
+    {
+        log.LogInformation("Cache hit for '{CacheKey}'", cacheKey);
+        return Results.Content(cached, "application/json");
+    }
 
+    log.LogInformation("Gateway modtog søgning: '{Term}', source: {Source}", term, source ?? "all");
     var aggregated = new List<AggregatedSnippet>();
 
-    // Brugervenlige navne → interne HttpClient-navne
     var sourceMap = new Dictionary<string, string>
     {
         { "sent1-500", "sent" },
@@ -58,7 +75,7 @@ app.MapGet("/all-snippets/search/{term}", async (
         "sent1-500" => new[] { "sent1-500" },
         "sent501+" => new[] { "sent501+" },
         "deleted" => new[] { "deleted" },
-        _ => new[] { "sent1-500", "sent501+", "deleted" } // default: alle
+        _ => new[] { "sent1-500", "sent501+", "deleted" }
     };
 
     foreach (var userSource in selectedSources)
@@ -107,7 +124,13 @@ app.MapGet("/all-snippets/search/{term}", async (
 
     log.LogInformation("Samlet antal resultater: {Total}", aggregated.Count);
 
-    return Results.Ok(aggregated);
+    var json = System.Text.Json.JsonSerializer.Serialize(aggregated);
+    await cache.SetStringAsync(cacheKey, json, new DistributedCacheEntryOptions
+    {
+        AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(5)
+    });
+
+    return Results.Content(json, "application/json");
 });
 
 app.Run();
