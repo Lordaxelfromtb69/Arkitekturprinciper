@@ -11,15 +11,17 @@ using Gateway.Api.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Configure HttpClient for the two snippet services
+// Registrer HttpClient-navne internt
 builder.Services.AddHttpClient("sent", c =>
-    c.BaseAddress = new Uri("http://localhost:5099/")
-);
-builder.Services.AddHttpClient("deleted", c =>
-    c.BaseAddress = new Uri("http://localhost:5021/")
-);
+    c.BaseAddress = new Uri("http://localhost:5099/"));  // Snippets.Api (1–500)
 
-// Add Swagger/OpenAPI for testing
+builder.Services.AddHttpClient("sentapi", c =>
+    c.BaseAddress = new Uri("http://localhost:5217/"));  // Sent.Api (501+)
+
+builder.Services.AddHttpClient("deleted", c =>
+    c.BaseAddress = new Uri("http://localhost:5021/"));  // Deleted.Api
+
+// Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -31,41 +33,49 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.MapGet("/health", () => Results.Ok("Healthy"));
-
-// --- Aggregator endpoint with optional source ---
+// --- Aggregator endpoint ---
+// GET /all-snippets/search/{term}?source=sent1-500|sent501+|deleted
 app.MapGet("/all-snippets/search/{term}", async (
     string term,
-    string? source,  // optional query parameter: sent, deleted, both/null
+    string? source,  // optional query parameter
     IHttpClientFactory http,
     ILogger<Program> log) =>
 {
-    log.LogInformation("Gateway modtog søgeforespørgsel: '{Term}', source={Source}", term, source ?? "both");
+    log.LogInformation("Gateway modtog søgning: '{Term}', source: {Source}", term, source ?? "all");
 
     var aggregated = new List<AggregatedSnippet>();
 
-    // Decide which services to call
-    var selectedSources = source?.ToLower() switch
+    // Brugervenlige navne → interne HttpClient-navne
+    var sourceMap = new Dictionary<string, string>
     {
-        "sent" => new[] { "sent" },
-        "deleted" => new[] { "deleted" },
-        _ => new[] { "sent", "deleted" }  // default: both
+        { "sent1-500", "sent" },
+        { "sent501+", "sentapi" },
+        { "deleted", "deleted" }
     };
 
-    foreach (var src in selectedSources)
+    string[] selectedSources = source?.ToLower() switch
     {
-        var client = http.CreateClient(src);
+        "sent1-500" => new[] { "sent1-500" },
+        "sent501+" => new[] { "sent501+" },
+        "deleted" => new[] { "deleted" },
+        _ => new[] { "sent1-500", "sent501+", "deleted" } // default: alle
+    };
+
+    foreach (var userSource in selectedSources)
+    {
+        var internalClientName = sourceMap[userSource];
+        var client = http.CreateClient(internalClientName);
+
         try
         {
-            log.LogInformation("Sender forespørgsel til {Source}.Api", src);
+            log.LogInformation("Sender forespørgsel til {Source}.Api", userSource);
 
             var partial = await client.GetFromJsonAsync<List<SnippetResult>>(
-                $"/snippets/search/{Uri.EscapeDataString(term)}"
-            );
+                $"/snippets/search/{Uri.EscapeDataString(term)}");
 
             if (partial != null)
             {
-                log.LogInformation("Modtog {Count} resultater fra {Source}.Api", partial.Count, src);
+                log.LogInformation("Modtog {Count} resultater fra {Source}.Api", partial.Count, userSource);
 
                 foreach (var sn in partial)
                 {
@@ -75,24 +85,23 @@ app.MapGet("/all-snippets/search/{term}", async (
                         .ToArray();
 
                     var idx = Array.FindIndex(words, w =>
-                        string.Equals(w, term, StringComparison.OrdinalIgnoreCase)
-                    );
+                        string.Equals(w, term, StringComparison.OrdinalIgnoreCase));
 
                     string snippetContext = idx < 0
                         ? sn.SnippetSentence
                         : string.Join(" ", words.Skip(Math.Max(0, idx - 4)).Take(9));
 
-                    aggregated.Add(new AggregatedSnippet(src, sn.Document, snippetContext));
+                    aggregated.Add(new AggregatedSnippet(userSource, sn.Document, snippetContext));
                 }
             }
             else
             {
-                log.LogWarning("Ingen data modtaget fra {Source}.Api", src);
+                log.LogWarning("Ingen resultater fra {Source}.Api", userSource);
             }
         }
-        catch (Exception ex) when (ex is HttpRequestException || ex is TaskCanceledException)
+        catch (Exception ex) when (ex is HttpRequestException or TaskCanceledException)
         {
-            log.LogWarning(ex, "Kald til {Source}.Api fejlede", src);
+            log.LogWarning(ex, "Kald til {Source}.Api fejlede", userSource);
         }
     }
 
