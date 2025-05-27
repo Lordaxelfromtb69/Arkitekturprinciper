@@ -171,18 +171,7 @@
         }
       },
       "System.Memory/4.5.3": {},
-      "SearchMonitor/1.0.0": {
-        "runtime": {
-          "SearchMonitor.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
       "Shared/1.0.0": {
-        "dependencies": {
-          "SearchMonitor": "1.0.0"
-        },
         "runtime": {
           "Shared.dll": {
             "assemblyVersion": "1.0.0.0",
@@ -246,11 +235,6 @@
       "sha512": "sha512-3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
       "path": "system.memory/4.5.3",
       "hashPath": "system.memory.4.5.3.nupkg.sha512"
-    },
-    "SearchMonitor/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     },
     "Shared/1.0.0": {
       "type": "project",
