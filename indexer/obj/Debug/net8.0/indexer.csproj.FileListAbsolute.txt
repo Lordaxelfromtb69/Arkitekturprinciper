@@ -206,13 +206,6 @@ C:\Users\Axelb\Source\Repos\Arkitekturprinciper2pull\indexer\obj\Debug\net8.0\re
 C:\Users\Axelb\Source\Repos\Arkitekturprinciper2pull\indexer\obj\Debug\net8.0\indexer.pdb
 C:\Users\Axelb\Source\Repos\Arkitekturprinciper2pull\indexer\obj\Debug\net8.0\indexer.genruntimeconfig.cache
 C:\Users\Axelb\Source\Repos\Arkitekturprinciper2pull\indexer\obj\Debug\net8.0\ref\indexer.dll
-C:\Users\Axelb\Source\Repos\Arkitekturprinciperpull5\indexer\bin\Debug\net8.0\appsettings.Development.json
-C:\Users\Axelb\Source\Repos\Arkitekturprinciperpull5\indexer\bin\Debug\net8.0\appsettings.json
-C:\Users\Axelb\Source\Repos\Arkitekturprinciperpull5\indexer\bin\Debug\net8.0\SearchMonitor.deps.json
-C:\Users\Axelb\Source\Repos\Arkitekturprinciperpull5\indexer\bin\Debug\net8.0\SearchMonitor.runtimeconfig.json
-C:\Users\Axelb\Source\Repos\Arkitekturprinciperpull5\indexer\bin\Debug\net8.0\SearchMonitor.staticwebassets.runtime.json
-C:\Users\Axelb\Source\Repos\Arkitekturprinciperpull5\indexer\bin\Debug\net8.0\SearchMonitor.staticwebassets.endpoints.json
-C:\Users\Axelb\Source\Repos\Arkitekturprinciperpull5\indexer\bin\Debug\net8.0\SearchMonitor.exe
 C:\Users\Axelb\Source\Repos\Arkitekturprinciperpull5\indexer\bin\Debug\net8.0\indexer.exe
 C:\Users\Axelb\Source\Repos\Arkitekturprinciperpull5\indexer\bin\Debug\net8.0\indexer.deps.json
 C:\Users\Axelb\Source\Repos\Arkitekturprinciperpull5\indexer\bin\Debug\net8.0\indexer.runtimeconfig.json
@@ -242,10 +235,8 @@ C:\Users\Axelb\Source\Repos\Arkitekturprinciperpull5\indexer\bin\Debug\net8.0\ru
 C:\Users\Axelb\Source\Repos\Arkitekturprinciperpull5\indexer\bin\Debug\net8.0\runtimes\win-arm64\native\e_sqlite3.dll
 C:\Users\Axelb\Source\Repos\Arkitekturprinciperpull5\indexer\bin\Debug\net8.0\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\Axelb\Source\Repos\Arkitekturprinciperpull5\indexer\bin\Debug\net8.0\runtimes\win-x86\native\e_sqlite3.dll
-C:\Users\Axelb\Source\Repos\Arkitekturprinciperpull5\indexer\bin\Debug\net8.0\SearchMonitor.dll
 C:\Users\Axelb\Source\Repos\Arkitekturprinciperpull5\indexer\bin\Debug\net8.0\Shared.dll
 C:\Users\Axelb\Source\Repos\Arkitekturprinciperpull5\indexer\bin\Debug\net8.0\Shared.pdb
-C:\Users\Axelb\Source\Repos\Arkitekturprinciperpull5\indexer\bin\Debug\net8.0\SearchMonitor.pdb
 C:\Users\Axelb\Source\Repos\Arkitekturprinciperpull5\indexer\obj\Debug\net8.0\indexer.csproj.AssemblyReference.cache
 C:\Users\Axelb\Source\Repos\Arkitekturprinciperpull5\indexer\obj\Debug\net8.0\indexer.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Axelb\Source\Repos\Arkitekturprinciperpull5\indexer\obj\Debug\net8.0\indexer.AssemblyInfoInputs.cache

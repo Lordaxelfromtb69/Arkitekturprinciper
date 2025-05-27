@@ -171,25 +171,9 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
-      "SearchMonitor/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "compile": {
-          "bin/placeholder/SearchMonitor.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/SearchMonitor.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
-      },
       "Shared/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "SearchMonitor": "1.0.0"
-        },
         "compile": {
           "bin/placeholder/Shared.dll": {}
         },
@@ -340,11 +324,6 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
-    },
-    "SearchMonitor/1.0.0": {
-      "type": "project",
-      "path": "../SearchMonitor/SearchMonitor.csproj",
-      "msbuildProject": "../SearchMonitor/SearchMonitor.csproj"
     },
     "Shared/1.0.0": {
       "type": "project",

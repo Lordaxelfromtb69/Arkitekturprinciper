@@ -7,7 +7,4 @@
   <ItemGroup>
     <None Remove="Model\" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SearchMonitor\SearchMonitor.csproj" />
-  </ItemGroup>
 </Project>

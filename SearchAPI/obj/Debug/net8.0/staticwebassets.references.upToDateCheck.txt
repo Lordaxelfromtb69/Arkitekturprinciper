@@ -71,3 +71,4 @@ C:\Users\Axelb\Source\Repos\Arkitekturprinciper2pull\SearchMonitor\obj\Debug\net
 C:\Users\Axelb\Source\Repos\Arkitekturprinciper2pull\SearchMonitor\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Axelb\Source\Repos\Arkitekturprinciperpull5\SearchMonitor\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Axelb\Source\Repos\Arkitekturprinciperpull5\SearchMonitor\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Axelb\Source\Repos\Arkitekturprinciperpull5\SearchMonitor\obj\Debug\net8.0\staticwebassets.build.json
