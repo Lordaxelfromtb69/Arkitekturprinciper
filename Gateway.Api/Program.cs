@@ -29,6 +29,7 @@ builder.Services.AddHttpClient("deleted", c =>
 builder.Services.AddStackExchangeRedisCache(options =>
 {
     options.Configuration = "localhost:6379";
+    options.InstanceName = "GatewayCache_";
 });
 
 // Swagger
