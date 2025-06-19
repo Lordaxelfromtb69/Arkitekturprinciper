@@ -8,10 +8,14 @@ using Shared.Model; // PathOptions
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.WebHost.UseUrls("http://*:80");
+
 // Bind stier fra appsettings.json
 builder.Services.Configure<PathOptions>(
     builder.Configuration.GetSection("Paths")
 );
+
+builder.Services.AddControllers();
 
 // Swagger til udvikling
 builder.Services.AddEndpointsApiExplorer();
@@ -19,11 +23,11 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+
+app.UseSwagger();
+app.UseSwaggerUI();
+
+app.MapControllers();
 
 // === Endpoint: søg efter ord i dokumenter 1-500 ===
 app.MapGet("/snippets/search/{term}", (

@@ -7,21 +7,23 @@ using Microsoft.Extensions.Options;
 using Shared.Model;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.WebHost.UseUrls("http://*:80");
 
 builder.Services.Configure<PathOptions>(
     builder.Configuration.GetSection("Paths")
 );
 
+builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+
+app.UseSwagger();
+app.UseSwaggerUI();
+
+app.MapControllers();
 
 app.MapGet("/snippets/search/{term}", (
     string term,

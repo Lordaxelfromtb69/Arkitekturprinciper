@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Axelb\\source\\repos\\Arkitekturprinciperpull12\\Shared\\Shared.csproj": {}
+    "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciperpull12\\Shared\\Shared.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Axelb\\source\\repos\\Arkitekturprinciperpull12\\Shared\\Shared.csproj": {
+    "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciperpull12\\Shared\\Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Axelb\\source\\repos\\Arkitekturprinciperpull12\\Shared\\Shared.csproj",
+        "projectUniqueName": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciperpull12\\Shared\\Shared.csproj",
         "projectName": "Shared",
-        "projectPath": "C:\\Users\\Axelb\\source\\repos\\Arkitekturprinciperpull12\\Shared\\Shared.csproj",
+        "projectPath": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciperpull12\\Shared\\Shared.csproj",
         "packagesPath": "C:\\Users\\Axelb\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Axelb\\Source\\Repos\\Arkitekturprinciperpull12\\Shared\\obj\\",
         "projectStyle": "PackageReference",

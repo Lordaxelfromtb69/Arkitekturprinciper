@@ -23,4 +23,5 @@ COPY --from=build /out ./
 
 # Trin 7: Eksponér port og definér opstart
 EXPOSE 80
+ENV ASPNETCORE_ENVIRONMENT=Development
 ENTRYPOINT ["dotnet", "Gateway.Api.dll"]

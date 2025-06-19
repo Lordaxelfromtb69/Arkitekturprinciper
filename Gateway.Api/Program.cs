@@ -16,21 +16,22 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Registrer HttpClient-navne internt
 builder.Services.AddHttpClient("sent", c =>
-    c.BaseAddress = new Uri("http://localhost:5099/"));  // Snippets.Api (1–500)
+    c.BaseAddress = new Uri("http://sent1")); // searchengine-sent1
 
 builder.Services.AddHttpClient("sentapi", c =>
-    c.BaseAddress = new Uri("http://localhost:5217/"));  // Sent.Api (501+)
+    c.BaseAddress = new Uri("http://sent2")); // searchengine-sent2
 
 builder.Services.AddHttpClient("deleted", c =>
-    c.BaseAddress = new Uri("http://localhost:5021/"));  // Deleted.Api
+    c.BaseAddress = new Uri("http://deleted")); // searchengine-delete
+
 
 // Redis caching, for at køre redis skal du have en Redis-server kørende brug denne kommando i terminalen: docker run -d --name redis -p 6379:6379 redis
 
 builder.Services.AddStackExchangeRedisCache(options =>
 {
-    options.Configuration = "localhost:6379";
-    options.InstanceName = "GatewayCache_";
+    options.Configuration = "redis:6379"; // korrekt netværksnavn indenfor docker-compose
 });
+
 
 // Swagger
 builder.Services.AddEndpointsApiExplorer();
@@ -38,11 +39,10 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
+
     app.UseSwagger();
     app.UseSwaggerUI();
-}
+
 
 // --- Aggregator endpoint ---
 // GET /all-snippets/search/{term}?source=sent1-500|sent501+|deleted

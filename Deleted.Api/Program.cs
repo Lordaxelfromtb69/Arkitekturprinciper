@@ -8,10 +8,14 @@ using Shared.Model;  // PathOptions-POCO
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.WebHost.UseUrls("http://*:80");
+
 // Bind Paths-sektionen til PathOptions
 builder.Services.Configure<PathOptions>(
     builder.Configuration.GetSection("Paths")
 );
+
+builder.Services.AddControllers();
 
 // (Valgfrit) Swagger/OpenAPI
 builder.Services.AddEndpointsApiExplorer();
@@ -19,12 +23,11 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Swagger kun i Development
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+
+app.UseSwagger();
+app.UseSwaggerUI();
+
+app.MapControllers();
 
 // --- Søge‐endpoint mod deleted_items-mappen ---
 app.MapGet("/snippets/search/{term}", (
