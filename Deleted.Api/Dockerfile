@@ -18,8 +18,9 @@ RUN dotnet publish Deleted.Api/Deleted.Api.csproj -c Release -o /out
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
 
-# Trin 6: Kopiér build output fra build-step
+# Trin 6: Kopiér build output og data
 COPY --from=build /out ./
+COPY deleted_items /app/deleted_items
 
 # Trin 7: Konfigurer port og entrypoint
 EXPOSE 80

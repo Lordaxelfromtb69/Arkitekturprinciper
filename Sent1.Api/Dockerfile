@@ -18,8 +18,9 @@ RUN dotnet publish Sent1.Api/Sent1.Api.csproj -c Release -o /out
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
 
-# Trin 6: Kopiér publiceret output til runtime container
+# Trin 6: Kopiér publiceret output og data til runtime container
 COPY --from=build /out ./
+COPY _sent_mail /app/_sent_mail
 
 # Trin 7: Start applikationen
 EXPOSE 80
