@@ -17,21 +17,17 @@ services:
     image: searchengine-sent1
     build:
       context: .
-      dockerfile: Sent1.Api/Dockerfile  # tidligere Snippets.Api
+      dockerfile: Sent1.Api/Dockerfile
     ports:
       - "5099:80"
-    volumes:
-      - C:/Users/Axelb/OneDrive/Skrivebord/medium/allen-p/_sent_mail:/app/_sent_mail
 
   sent2:
     image: searchengine-sent2
     build:
       context: .
-      dockerfile: Sent2.Api/Dockerfile  # tidligere Sent.Api
+      dockerfile: Sent2.Api/Dockerfile
     ports:
       - "5217:80"
-    volumes:
-      - C:/Users/Axelb/OneDrive/Skrivebord/medium/allen-p/_sent_mail:/app/_sent_mail
 
   deleted:
     image: searchengine-deleted
@@ -40,8 +36,6 @@ services:
       dockerfile: Deleted.Api/Dockerfile
     ports:
       - "5021:80"
-    volumes:
-      - C:/Users/Axelb/OneDrive/Skrivebord/medium/allen-p/deleted_items:/app/deleted_items
 
   loadbalancer:
     image: searchengine-loadbalancer
@@ -61,8 +55,6 @@ services:
       dockerfile: Inbox.Api/Dockerfile
     ports:
       - "6001:80"
-    volumes:
-      - C:/Users/Axelb/OneDrive/Skrivebord/medium/allen-p/inbox:/app/inbox
 
   inbox2:
     image: searchengine-inbox2
@@ -71,8 +63,6 @@ services:
       dockerfile: Inbox.Api/Dockerfile
     ports:
       - "6002:80"
-    volumes:
-      - C:/Users/Axelb/OneDrive/Skrivebord/medium/allen-p/inbox:/app/inbox
 
   redis:
     image: redis

@@ -20,7 +20,7 @@ WORKDIR /app
 
 # Trin 6: Kopiér publiceret output og datamappe til containeren
 COPY --from=build /out ./
-COPY _sent_mail /app/_sent_mail
+COPY Sent2.Api/_sent_mail /app/_sent_mail
 
 # Trin 7: Eksponér port og start API
 EXPOSE 80

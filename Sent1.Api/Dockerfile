@@ -20,7 +20,7 @@ WORKDIR /app
 
 # Trin 6: Kopiér publiceret output og data til runtime container
 COPY --from=build /out ./
-COPY _sent_mail /app/_sent_mail
+COPY Sent1.Api/_sent_mail /app/_sent_mail
 
 # Trin 7: Start applikationen
 EXPOSE 80
