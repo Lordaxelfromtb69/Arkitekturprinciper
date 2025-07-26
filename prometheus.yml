@@ -1,0 +1,7 @@
+global:
+  scrape_interval: 5s
+
+scrape_configs:
+  - job_name: 'searchengine'
+    static_configs:
+      - targets: ['gateway:80', 'sent1:80', 'sent2:80', 'inbox1:80', 'inbox2:80']
